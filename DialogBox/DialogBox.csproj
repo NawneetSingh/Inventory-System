@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD8DFA1A-2906-4AE3-BAED-7FEAE729E526}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DialogBox</RootNamespace>
+    <AssemblyName>DialogBox</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Program Files (x86)\Bunifu Technologies\Bunifu Framework Manager\bin\updates\Bunifu UI 1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Spire.Barcode, Version=1.4.12.11040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.2.16.27\lib\net40\Spire.Barcode.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Common, Version=1.2.782.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.2.16.27\lib\net40\Spire.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.DataExport, Version=3.5.131.4040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.2.16.27\lib\net40\Spire.DataExport.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.DataExport.ResourceMgr, Version=1.6.71.4040, Culture=neutral, PublicKeyToken=4bc1500157862925, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.2.16.27\lib\net40\Spire.DataExport.ResourceMgr.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Doc, Version=6.2.2.4040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.2.16.27\lib\net40\Spire.Doc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.DocViewer.Forms, Version=2.5.0.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.2.16.27\lib\net40\Spire.DocViewer.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Email, Version=1.1.19.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.2.16.27\lib\net40\Spire.Email.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.6.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.2.16.27\lib\net40\Spire.License.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.OfficeViewer.Forms, Version=2.16.27.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.2.16.27\lib\net40\Spire.OfficeViewer.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=4.2.4.3040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.2.16.27\lib\net40\Spire.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Asp, Version=3.2.0.3340, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.2.16.27\lib\net40\Spire.PdfViewer.Asp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Forms, Version=3.2.0.3340, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.2.16.27\lib\net40\Spire.PdfViewer.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Presentation, Version=2.9.0.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.2.16.27\lib\net40\Spire.Presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Spreadsheet, Version=2.2.52.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.2.16.27\lib\net40\Spire.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.XLS, Version=8.0.0.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Office.2.16.27\lib\net40\Spire.XLS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add Dealer Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Dealer Info.Designer.cs">
+      <DependentUpon>Add Dealer Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Product.Designer.cs">
+      <DependentUpon>Add_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.cs">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DealerAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DealerAudit.Designer.cs">
+      <DependentUpon>DealerAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export.Designer.cs">
+      <DependentUpon>Export.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterBox.Designer.cs">
+      <DependentUpon>FilterBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterDealer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterDealer.Designer.cs">
+      <DependentUpon>FilterDealer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generate Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generate Bill.Designer.cs">
+      <DependentUpon>Generate Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratePurchaseBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneratePurchaseBill.Designer.cs">
+      <DependentUpon>GeneratePurchaseBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Import.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Import.Designer.cs">
+      <DependentUpon>Import.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAudit.Designer.cs">
+      <DependentUpon>LoginAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductActivationWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductActivationWindow.Designer.cs">
+      <DependentUpon>ProductActivationWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductPurchase.Designer.cs">
+      <DependentUpon>ProductPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseAudit.Designer.cs">
+      <DependentUpon>PurchaseAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseBill.Designer.cs">
+      <DependentUpon>PurchaseBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Selling Dialog Box.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selling Dialog Box.Designer.cs">
+      <DependentUpon>Selling Dialog Box.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stocks.Designer.cs">
+      <DependentUpon>Stocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Units.Designer.cs">
+      <DependentUpon>Units.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WareHouse Data.Designer.cs">
+      <DependentUpon>WareHouse Data.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add Dealer Info.resx">
+      <DependentUpon>Add Dealer Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_Product.resx">
+      <DependentUpon>Add_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealerAudit.resx">
+      <DependentUpon>DealerAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export.resx">
+      <DependentUpon>Export.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterBox.resx">
+      <DependentUpon>FilterBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterDealer.resx">
+      <DependentUpon>FilterDealer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generate Bill.resx">
+      <DependentUpon>Generate Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneratePurchaseBill.resx">
+      <DependentUpon>GeneratePurchaseBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Import.resx">
+      <DependentUpon>Import.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginAudit.resx">
+      <DependentUpon>LoginAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductActivationWindow.resx">
+      <DependentUpon>ProductActivationWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductPurchase.resx">
+      <DependentUpon>ProductPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseAudit.resx">
+      <DependentUpon>PurchaseAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseBill.resx">
+      <DependentUpon>PurchaseBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selling Dialog Box.resx">
+      <DependentUpon>Selling Dialog Box.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stocks.resx">
+      <DependentUpon>Stocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units.resx">
+      <DependentUpon>Units.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WareHouse Data.resx">
+      <DependentUpon>WareHouse Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\03.jpg" />
+    <Content Include="Images\Login.jpg" />
+    <Content Include="Images\sign.jpg" />
+    <Content Include="Images\Signup.jpg" />
+    <Content Include="Images\Units.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Excel\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
